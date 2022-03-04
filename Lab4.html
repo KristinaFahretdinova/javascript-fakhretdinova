@@ -1,0 +1,35 @@
+<meta charset="UTF-8" />
+<html>
+<head>
+<title>JavaScript4</title>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+var x, y, password, password1;
+password=321;
+password1=window.prompt("Введите пароль",'');
+if(password==password1)
+{
+x=parseInt(prompt("Введите значение х",'')); // метод parseInt() переводит строку в целое
+y=parseInt(prompt("Введите значение у",'')); // число
+if(x<y)
+{
+alert("Максимальное число - y");
+}
+else if(x>y)
+{
+alert("Максимальное число - x");
+}
+else
+{
+alert("Введенные числа равны!");
+}
+
+document.writeln("Пароль введен правильно!");
+}
+else {
+document.writeln("Пароль введен неправильно!");
+}
+</script>
+</body>
+</html>

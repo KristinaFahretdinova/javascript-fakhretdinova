@@ -1,0 +1,23 @@
+<p> Фахретдинова К.О. ПИ-321 </p>
+<meta charset="UTF-8" />
+<html>
+<head>
+<title>JavaScript7</title>
+	<script language="JavaScript">
+	function schoolItems(){
+		subj = new Array("русский язык"," литература"," история"," обществознание"," иностранный язык"," музыка"," ОБЖ"," алгебра"," геометрия"," физика"," химия"," информатика");
+		hum = new Array(); //гуманитарные  
+		exact = new Array(); //точные
+			hum=subj.slice(0,5);
+			exact=subj.slice(7,12);
+		document.write("<b>Гуманитарные науки: </b>"+hum+"<br>");
+		document.write("<b>Точные науки: </b>"+exact+"<br>");
+	}
+   </script>
+</head>
+<body>
+	<script>
+	schoolItems();
+	</script>
+</body>
+</html>
