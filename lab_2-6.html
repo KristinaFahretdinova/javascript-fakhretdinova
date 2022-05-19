@@ -1,0 +1,219 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Задание 6</title>
+		<style>
+		
+			fieldset {
+				background-color: #eeeeee;
+				font-size:16px; 
+				padding:12px; 
+				width:550px;
+			}
+
+			legend {
+				background-color: gray;
+				color: white;
+				padding: 5px 10px;
+			}
+
+			input {
+				margin: 5px;
+			}
+ 
+		</style>
+		<script type="text/javascript" src="libs/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<fieldset>
+			<legend> Опрос </legend>
+			<fieldset class="Marvel">
+				<legend> Вы любите фильмы и сериалы Marvel? </legend>
+				<input type="radio" id="p1" class="com"
+				name="Marvel" value="Yes">
+				<label for="p1">Да</label>
+				<input type="radio" id="p2" class="com"
+				name="Marvel" value="No">
+				<label for="p2">Нет</label>
+			</fieldset>
+
+			<fieldset class="victory">
+				<legend> Кто должен был победить в фильме "Капитан Америка: Противостояние"? </legend>
+				<input type="radio" id="a1" class="com"
+				name="victory" value="Cap">
+				<label for="a1">Команда Стива Роджерса</label>
+				<input type="radio" id="a2" class="com"
+				name="victory" value="Iron">
+				<label for="a2">Команда Железного Человека</label>	
+				<input type="radio" id="a3" class="com"
+				name="victory" value="Friend">
+				<label for="a3">Дружба</label>
+			</fieldset>
+  
+			<fieldset class="rat">
+				<legend> Согласны ли вы, что в фильме "Мстители: Финал" всех спасла крыса? </legend>
+				<input type="radio" id="w1" class="com"
+				name="rat" value="Yes">
+				<label for="w1">Да</label>
+				<input type="radio" id="w2" class="com"
+				name="rat" value="No">
+				<label for="w2">Нет</label>	
+			</fieldset>
+  
+			<fieldset class="spider">
+				<legend>Ваш любимый Питер Паркер, Человек-паук?</legend>
+				<input type="radio" id="r1" class="com"
+				name="spider" value="New">
+				<label for="r1">Тоби Магуайр</label>
+				<input type="radio" id="r2" class="com"
+				name="spider" value="Sred">
+				<label for="r2">Эндрю Гарфилд</label>
+				<input type="radio" id="r3" class="com"
+				name="spider" value="Old">
+				<label for="r3">Том Холланд</label>
+			</fieldset>
+  
+			<center><button id='finish'>Закончить/Новый опрос</button> </center>
+		</fieldset>
+  
+		<fieldset >
+			<legend> Вывод </legend>
+			<fieldset>
+				<legend> Вы любите фильмы и сериалы Marvel? </legend>
+				<p id="py">?</p>
+				<p id="pn">?</p>
+			</fieldset>
+			<fieldset>
+				<legend> Кто должен был победить в фильме "Капитан Америка: Противостояние"? </legend>
+				<p id="a11">?</p>
+				<p id="a12">?</p>
+				<p id="a13">?</p>
+			</fieldset>
+   
+			<fieldset>
+				<legend> Согласны ли вы, что в фильме "Мстители: Финал" всех спасла крыса? </legend>
+				<p id="w11">?</p>
+				<p id="w12">?</p>
+			</fieldset>
+   
+			<fieldset>
+				<legend>Ваш любимый Питер Паркер, Человек-паук?</legend>
+					<p id="r11">?</p>
+					<p id="r12">?</p>
+					<p id="r13">?</p>
+			</fieldset>
+   
+			<p id="user">?</p>
+   
+		</fieldset>
+
+		<script type="text/javascript">
+ 
+			$(document).ready(function(){
+				$('#finish').prop('disabled',true);
+
+
+				let i=0;
+				let users=1;
+				let p1=0;
+				let p2=0;
+				let a1=0;
+				let a2=0;
+				let a3=0;
+				let w1=0;
+				let w2=0;
+				let r1=0;
+				let r2=0;
+				let r3=0;
+
+
+				$('#p1').change(function() {
+					p1++;
+					$('.Marvel').attr('disabled', true);
+ 
+				});
+
+				$('#p2').change(function() {
+					p2++;
+					$('.Marvel').attr('disabled', true);
+				});
+
+				$('#a1').change(function() {
+					a1++;
+					$('.victory').attr('disabled', true);
+				});
+
+				$('#a2').change(function() {
+					a2++;
+					$('.victory').attr('disabled', true);
+				});
+
+				$('#a3').change(function() {
+					a3++;
+					$('.victory').attr('disabled', true);
+				});
+
+				$('#w1').change(function() {
+					w1++;
+					$('.rat').attr('disabled', true);
+				});
+
+				$('#w2').change(function() {
+					w2++;
+					$('.rat').attr('disabled', true);
+				});
+
+				$('#r1').change(function() {
+					r1++;
+					$('.spider').attr('disabled', true);
+				});
+
+				$('#r2').change(function() {
+					r2++;
+					$('.spider').attr('disabled', true);
+				});
+
+				$('#r3').change(function() {
+					r3++;
+					$('.spider').attr('disabled', true);
+				});
+
+				$('.com').change(function() {
+
+					$("#py").text("Да: " + p1/users + "%");
+					$("#pn").text("Нет: " + p2/users + "%");
+					$("#a11").text("Команда Стива Роджерса: " + a1/users + "%");
+					$("#a12").text("Команда Железного Человека: " + a2/users + "%");
+					$("#a13").text("Дружба: " + a3/users + "%");
+					$("#w11").text("Согласны: " + w1/users + "%");
+					$("#w12").text("Не согласны: " + w2/users + "%");
+					$("#r11").text("Тоби Магуайр: " + r1/users + "%");
+					$("#r12").text("Эндрю Гарфилд: " + r2/users + "%");
+					$("#r13").text("Том Холланд: " + r3/users + "%");
+					$("#user").text("Пользователей: " + users );
+
+					i++;
+
+					if (i==4){
+						$('#finish').prop('disabled',false);
+					}else{
+						$('#finish').prop('disabled',true);
+					}
+				});
+
+
+				$('#finish').on('click', function(){
+					users++;
+					i=0;
+					$('#finish').prop('disabled',true);
+					$('.com').prop('checked',false);
+					$('.Marvel').attr('disabled', false);
+					$('.victory').attr('disabled', false);
+					$('.rat').attr('disabled', false);
+					$('.spider').attr('disabled', false);
+				});
+			});
+		</script>
+ 
+	</body>
+</html>
