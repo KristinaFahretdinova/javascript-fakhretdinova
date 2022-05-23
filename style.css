@@ -1,0 +1,245 @@
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+    	background: url("https://kartinkin.net/uploads/posts/2021-03/thumbs/1616048537_1-p-beskonechnii-fon-1.jpg");
+	}
+	mark {
+    font-family: "Cinzel";
+    color: #e6c619;
+    text-transform: uppercase;
+    background: rgba(250, 213, 245, 0.9);
+    border-radius: 40%;
+    padding: 15px;
+    font-style: italic;
+    font-size: 1.8em;
+    margin-bottom: 400px;
+}
+	.demoHeaders {
+		margin-top: 2em;
+		color: white;
+		padding: 15px 15px 15px 15px;
+		background: rgba(250, 213, 245, 0.9);
+		border-radius: 5px;
+		text-shadow: black 0 0 4px;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#modal_form {
+	width: 300px; 
+	height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 50%; /* пoлoвинa экрaнa слевa */
+	margin-top: -150px;
+	margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	.ui-textfield {
+    font: inherit;
+    color: inherit;
+    background: none;
+    text-align: inherit;
+    outline: none;
+    cursor: text;	
+	}
+	
+	select {
+		width: 200px;
+	}
+	
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+   #dialog-form { background: rgba(250, 213, 245, 0.9);}
+   fieldset { padding:0; border:0; background:}
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+    #header {
+	height: 300px;
+	margin-bottom: 15px;
+	background: 100% 300px url("https://png.pngtree.com/thumb_back/fh260/background/20200929/pngtree-liquid-gradient-background-delicate-image_400079.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: rgba(250, 213, 245, 0.5);
+	border-radius: 5px;
+}
+#content {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: rgba(250, 213, 245, 0.5);
+	border-radius: 5px;
+}
+#content #accordion{
+	padding: 15px 15px 15px 15px;
+	
+}
+#content #accordion .vkladki{
+	background: rgba(250, 213, 245, 0.9);
+}
+#content #accordion .im {
+	height: 100px;
+	height: 100px;
+	border: 1px #000 solid;
+}
+
+#content #accordion .h3{
+	background: rgba(250, 213, 245, 1);
+	color: white;
+	text-shadow: black 0 0 5px;
+	font-size: 1.2em;
+}
+
+	#header .pages {
+		list-style-type: none;
+		height: 39px;
+		padding-top: 3px;
+		float: left;
+		border-radius: 25px;
+	    border: 2px #fff solid;
+	    background: rgba(250, 213, 245, 0.8);
+	    margin-left: 15px;
+	}
+		#header .pages li {
+			float: left;
+			
+		}
+		#header .pages li a {
+			display: block;
+			font-size: 0.9em;
+			font-weight: bold;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 10px 5px 15px 2px;
+			margin-right: 50px;
+			text-decoration: none;
+			text-shadow: black 0 0 4px;
+			
+		}
+		#header .pages li a:hover {
+			text-decoration: underline;
+			color: #e6c619;
+		}
+	#header form {
+		width: 245px; height: 26px;
+		background: url(images/search.gif) no-repeat 0 8px;
+		float: right;
+		padding: 8px 30px 0 0;
+	}
+		#header form input {
+			border: 0;
+			float: left;
+			width: 170px;
+			margin: 5px;
+		}
+		#header form button {
+			border: 0;
+			text-indent: -9999px;
+			font-size: 0;
+			width: 60px; height: 26px;
+			float: right;
+			background-color: transparent;
+		}
+	#header .logo {
+		clear: both;
+		float: left;
+		padding: 10px 0 36px 20px;
+		
+	}
+	#header .logo .nam {
+		clear: both;
+		float: right;
+		margin: 50px 120px 5px 25px ;
+		text-shadow: black 0 0 1px;
+		
+	}
+		#header .logo h1 {
+		    float: right;
+		    vertical-align: middle;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			text-shadow: black 0 0 4px;
+		}
+			#header .logo h1 a {
+				text-decoration: none;
+			}
+		#header .logo p {
+			color: #888888;
+			font-weight: bold;
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+	#header .sponsor {
+		float: right;
+		padding: 25px 0;
+	}
+	#header .categories {
+		clear: both;
+		list-style-type: none;
+		height: 40px;
+		border-bottom: 5px solid #003366;
+		border-top: 1px solid #DDDDDD;
+		overflow: hidden;
+	}
+		#header .categories li {
+			float: left;
+		}
+		#header .categories li a {
+			display: block;
+			padding: 13px;
+			color: #333333;
+			border-right: 1px solid #dddddd;
+			text-decoration: none;
+		}
+		#header .categories li a:hover {
+			background-color: #003366;
+			color: #ffffff;
+		}
+		.btn{
+	cursor: pointer;
+	height: 70px;
+	background: rgba(250, 213, 245, 0.5);;
+	border: 1.5px solid #A5A5A5;
+	width: 15%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px 40% 0% 40% ;
+}
+	
