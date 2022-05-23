@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Фахретдинова Кристина</title>
+	
+	</head>
+	<body link="#0000FF" vlink=" #800080" alink="#ff0000" bgcolor="#ffffff">
+		<script>
+			let tek = 5;
+			function isl(str) {
+				if (str.length==0) {
+					document.getElementById("isk").innerHTML="";
+					return;
+				}
+				if (window.XMLHttpRequest) {
+					xmlhttp=new XMLHttpRequest();
+				} else {  
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function() {
+					if (this.readyState==4 && this.status==200) {
+						document.getElementById("isk").innerHTML=this.responseText;
+					}
+				}
+				xmlhttp.open("GET","rss.php?tek="+tek,true);
+				xmlhttp.send();
+				tek+=5;
+			}
+		</script>
+	</head>
+	<body style="background-image: url(images/images.jpg);background-size: 100%;">
+	
+		<BODY BGCOLOR="#000000">
+		<CENTER>
+			<FONT COLOR="#0000ff"><h1>Актуальные новости Профкома Студентов УГАТУ</h1></FONT>
+		<HR NOSHADE>
+			<FONT COLOR="#000000">
+				<h2>Стипендии и материальная помощь</h2>
+				<img src="images/stip1.jpg"><br>
+				<a href="https://vk.com/@profcom_ugatu-stipendii-i-materialnaya-pomosch">Подробнее</a><br>
+
+				<h2>Иерархия и должности в университете</h2>
+				<img src="images/ruk1.jpg"><br>
+				<a href="https://vk.com/@profcom_ugatu-ierarhiya-i-dolzhnosti-v-universitete">Подробнее</a><br>
+
+				<h2>Доброе утро! Итоги 38 учебной недели</h2>
+				<img src="images/itog1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22389">Подробнее</a><br>
+
+				<h2>День авиации. Ждем всех!</h2>
+				<img src="images/avia2.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22387">Подробнее</a><br>
+			
+				<h2>Таврида.АРТ. Фестиваль в Крыму</h2>
+				<img src="images/tavr1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22383">Подробнее</a><br>
+
+				<span id = "isk"></span>
+
+		<HR NOSHADE>
+			<div id="more"  style="display:none;" class="answer_list" >
+
+				<h2>День защиты детей!</h2>
+				<img src="images/cids1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22264">Подробнее</a><br>
+
+				<h2>WARPOINT - Арена виртуальной реальности</h2>
+				<img src="images/warp1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22194">Подробнее</a><br>
+
+				<h2>Анкетирование. Оценка качества организации образовательного процесса</h2>
+				<img src="images/ank1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22192">Подробнее</a><br>
+
+				<h2>Парад ВУЦ УГАТУ - 2022</h2>
+				<img src="images/vyc1.jpg"><br>
+				<a href="https://vk.com/wall-10658948_22174">Подробнее</a><br>
+			
+				<h2>Сможем ли мы жить прежней жизнью?</h2>
+				<img src="images/covid1.jpg"><br>
+				<a href="https://vk.com/@profcom_ugatu-smozhem-li-my-zhit-prezhnei-zhiznu">Подробнее</a><br>
+			
+			</div>
+			</FONT>
+			<br>
+			<input type="button" name="answer" value="Показать еще" onclick="ShowMore()"/>
+		<script>
+			function ShowMore() {
+				document.getElementById('more').style.display = "block";
+			}
+		</script>
+		</CENTER>
+	</body>
+</html> 

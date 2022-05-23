@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head> 
+		<style>
+			.stroke {
+				font: 2em Arial, sans-serif;
+				text-shadow: black 0 0 5px;
+			}
+		</style>
+		<style>
+			.button {
+				background-color: 	#0000ff;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+			.button3 {
+				padding: 14px 40px;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Фахретдинова Кристина</title>
+	</head>
+
+	<body>
+		<body bgcolor="#fcd7e9">
+		<CENTER>
+			<FONT COLOR="#0000ff"><FONT SIZE="+3">
+				<h2>Обратная связь!</h2>
+			</FONT>
+			<FONT COLOR="#000000"><FONT SIZE="+1">
+				<h2>Дорогие студенты!</h2>
+			</FONT>
+			<FONT COLOR="#000000">
+				<h3>19 мая в концертном зале имени М.И. Рабиновича состоялся гала-концерт «Студенческая весна». Просим вас написать пару слов по прошедшему мероприятию по форме ниже</h3>
+			</FONT>
+		
+		<img src="images/studv1.jpg">
+		<FONT COLOR="#000000">
+			<h2 align="left">Форма для отзыва
+		<form action="" method="post">
+			<table align="left">
+				<tbody>
+					<tr>
+						<td>ФИО:</td>
+						<td><input type="text" name="name" id="name"/></td>
+					</tr>
+					<tr>
+						<td>Факультет:</td>
+						<td><input type="text" name="faculty" id="faculty"/></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" name="email" id="email"/></td>
+					</tr>
+					<tr>
+						<td>Отзыв:</td>
+						<td><input type="text" name="comment" id="comment"/></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<br><br><br><br><br>
+		<div id="search_place" style="float:left;">
+			<input  onclick = "ot(this.value)" type="button" value="Отправить" align="middle" class="button button3">
+		</div>
+		<br><br><br>
+		<p>ОТЗЫВЫ: </p>
+			<span id = "tut", align="left", ></span> 
+			<script>
+				let tek = 3;
+				window.addEventListener("load",function() {
+					var request = new XMLHttpRequest();
+					request.open('GET','com.php',true);
+					request.addEventListener('readystatechange', function() {
+						if ((request.readyState==4) && (request.status==200)) {
+							var welcome = document.getElementById('tut');
+							welcome.innerHTML = request.responseText;
+						}
+					});
+					request.send();
+				});
+				function ot(str) {
+					alert("Спасибо за отзыв! Успешно отправлен!");
+					if (str.length==0) {
+						document.getElementById("tut").innerHTML="";
+						return;
+					}
+					if (window.XMLHttpRequest) {
+						xmlhttp=new XMLHttpRequest();
+					} else {  
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xmlhttp.onreadystatechange=function() {
+						if (this.readyState==4 && this.status==200) {
+							document.getElementById("tut").innerHTML=this.responseText;
+						}
+					}
+					tek+=1;
+					var nam = document.getElementById("name").value, faculty = document.getElementById("faculty").value, email = document.getElementById("email").value, comment=document.getElementById("comment").value;
+					var variables = "tek="+tek+"&name="+nam+"&faculty="+faculty+"&email="+email+"&comment="+comment;
+					xmlhttp.open("GET","comm.php?"+variables,true);
+					xmlhttp.send();
+				}
+			</script>
+	</body>
+</html> 
